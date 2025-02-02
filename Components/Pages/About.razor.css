@@ -1,0 +1,66 @@
+﻿.text {
+    font-size: 30px;
+    text-align:center;
+}
+
+::deep .mudContainer {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin-top:10%;
+    padding:5%;
+  
+}
+.profileText {
+    text-align: justify;
+}
+
+.about {
+    margin: 5% !important;
+  
+}
+.profile-photo1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+::deep .itemOne {
+    height: 200px !important;
+}
+
+
+@media (min-width: 641px) {
+
+    .text {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    ::deep .mudContainer {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+        padding: 2%;
+        margin-top: 5%;
+    }
+
+    .about {
+        margin: 2% !important;
+    }
+
+    .profile-photo1 {
+        width:50px;
+        height:50px;
+        border-radius:50px;
+    }
+    .custom-card-height {
+        height: 50px; /* Adjust the height as needed */
+        overflow: hidden; /* Optional, prevents overflow of content */
+    }
+    .profileText {
+        text-align:justify;
+    }
+    ::deep .itemOne {
+        height: 200px !important;
+    }
+
+}

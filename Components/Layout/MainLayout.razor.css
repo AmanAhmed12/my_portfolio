@@ -8,6 +8,21 @@ main {
     flex: 1;
 }
 
+.social-icons a {
+    padding-left:10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #d3d3d3; /* Light Gray */
+    transition: color 0.3s ease; /* Smooth color transition */
+
+}
+
+    .social-icons a:hover {
+        color: #0073b1; /* Change color on hover */
+    }
+
+
+
 
 .home-section {
     height: 89vh;
@@ -47,11 +62,14 @@ main {
 .top-row {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
     border-bottom: 1px solid #d6d5d5;
-    justify-content: flex-end;
+    justify-content: space-between;
     height: 3.5rem;
     display: flex;
-    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 
+    align-items: center;
 }
 
 .link {
@@ -65,11 +83,7 @@ main {
     transition: all 0.3s ease; /* Smooth transition */
 }
 
-.top-row2 .link.active {
-    font-weight: 600;
-    color: #007bff; /* Highlight active link */
-    background-color:red;
-}
+
 
     .link:hover {
      
@@ -78,20 +92,51 @@ main {
 
 
 .login-btn {
-    color:white;
-}
-.top-row2 {
-    background-color: #f7f7f7;
-    border-bottom: 1px;
-    justify-content: flex-end;
-    height: 3.5rem;
-    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+   
+    border-radius: 8px;
+    display: inline-flex;
     align-items: center;
-    position: fixed;
-    width: 100vw;
-    top:0;
-    z-index: 9999;
+    gap: 8px; /* Space between icon and text */
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
 }
+
+    .login-btn i {
+        font-size: 18px;
+        color: white;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .login-btn:hover {
+        background-color: white;
+        color: #007bff;
+        border: 2px solid #007bff;
+        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+        transform: translateY(-2px); /* Subtle lift effect */
+        text-decoration: none; /* Ensures no underline appears */
+    }
+
+        .login-btn:hover i {
+            color: #007bff; /* Change icon color on hover */
+        }
+
+
+    .top-row2 {
+        background-color: #f7f7f7;
+        border-bottom: 1px;
+        justify-content: flex-end;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        z-index: 9999;
+    }
 
     .top-row ::deep a, .top-row ::deep .btn-link {
         white-space: nowrap;
@@ -99,7 +144,7 @@ main {
         text-decoration: none;
     }
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
+    .top-row ::deep .link:hover, .top-row ::deep .btn-link:hover {
         text-decoration: underline;
     }
 
@@ -153,17 +198,20 @@ main {
         color: black;
         text-decoration: none;
         margin: 5px;
-        padding:8px;
+        padding: 8px;
         font-size: 12px;
-        border-radius:10px;
-        font-weight:bold;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 2px solid #f7f7f7;
     }
 
-    .link:hover {
+        .link:hover {
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Example shadow */
+            border: 2px solid #007bff;
             transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
-            text-decoration:none;
-    }
+            text-decoration: none;
+            
+        }
 
     .sidebar {
         width: 250px;
@@ -188,6 +236,36 @@ main {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+
+
+    .about-section {
+        height: 91.7vh;
+        position: relative;
+    }
+
+        .about-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0; /* Position it at the bottom */
+            left: 0;
+            width: 100%; /* Take up the full width */
+            height: 5px; /* You can adjust the height of the border */
+            background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+        }
+
+    .social-icons a {
+        margin-left: 12px;
+        text-decoration: none;
+        font-size: 19px;
+        color: #d3d3d3; /* Light Gray */
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+
+        .social-icons a:hover {
+            color: #0073b1; /* Change color on hover */
+        }
+
+
 }
 
 #blazor-error-ui {
@@ -209,17 +287,6 @@ main {
         top: 0.5rem;
     }
 
-.about-section {
-    height: 91.7vh;
-    position: relative;
-}
 
-    .about-section::after {
-        content: '';
-        position: absolute;
-        bottom: 0; /* Position it at the bottom */
-        left: 0;
-        width: 100%; /* Take up the full width */
-        height: 5px; /* You can adjust the height of the border */
-        background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
-    }
+
+

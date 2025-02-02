@@ -1,5 +1,26 @@
 ﻿::deep .mudContainer {
-    margin-top:10%;
+    margin-top:20%;
+
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.mudCard {
+    animation: fadeIn 6s ease-out;
+}
+ .icon-spacing {
+        margin-right: 8px; /* Adjust the value as needed */
+    }
+.home {
+    animation: fadeIn 4s ease-out;
 }
 .designation {
     font-size: 15px;
@@ -33,10 +54,12 @@ body {
     align-items: center; /* Center the text vertically */
     padding: 10px 20px; /* Optional padding for better spacing */
     text-align: center; /* Ensure the text is centered */
+    border: 2px solid #007bff;
 }
 /*profile image css*/
 /* Container for the image with background blur */
 .image-container {
+    animation: fadeIn 4s ease-out;
     position: relative;
     width: 200px;
     height: 220px;
@@ -118,6 +141,29 @@ img {
     background: rgba(255, 255, 255, 0.15);
     filter: blur(12px);
 }
+
+
+
+
+::deep .btn-download i {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+::deep .btn-download:hover {
+    background-color: white;
+    background-image: none;
+    color: #007bff;
+    border: 2px solid #007bff;
+  
+    transition: color 0.3s ease; /* Smooth color transition */
+    text-decoration: none; /* Ensures no underline appears */
+}
+
+    ::deep .btn-download:hover i {
+        color: #007bff; /* Change icon color on hover */
+    }
 /*profile image css*/
 
 @media (min-width: 641px) {
@@ -133,8 +179,15 @@ img {
         font-size: 15px;
         text-align: justify;
     }
+    .mudCard {
+        animation: fadeIn 6s ease-out;
+    }
+    .home {
+        animation: fadeIn 4s ease-out;
+    }
 
     .image-container {
+        animation: fadeIn 4s ease-out;
         position: relative;
         width: 300px;
         height: 400px;
@@ -144,4 +197,20 @@ img {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease;
     }
+    .icon-spacing {
+        margin-right: 8px; /* Adjust the value as needed */
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+ 
 }

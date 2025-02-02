@@ -1,3 +1,45 @@
-﻿<h3>About</h3>
+﻿@page "/about"
+@using MudBlazor;
+<PageTitle>About</PageTitle>
 
+<div class="about">
+<MudContainer class="mudContainer">
+  
 
+    <MudGrid Spacing="4">
+            <MudItem xs="12" md="5" Class="itemOne">
+                <MudCard class=" rounded-lg shadow-lg text-center bg-gradient-primary itemOne ">
+                    <img src="images/black.png" alt="Team Member 1" class="profile-photo1  border-white border-3 shadow" />
+
+                <MudText Typo="Typo.h5" Align="Align.Center" Class="font-semibold text-white">John Doe</MudText>
+                <MudText Typo="Typo.body2" Align="Align.Center" Color="Color.Warning">Founder & CEO</MudText>
+               
+            </MudCard>
+        </MudItem>
+
+            <MudItem xs="12" md="5" Class="itemOne">
+                <MudCard class="rounded-lg shadow-lg text-center bg-gradient-primary itemOne">
+                    <img src="images/black.png" alt="Team Member 1" class="profile-photo1  border-white border-3 shadow" />
+                    <MudText Typo="Typo.h5" Align="Align.Center" Class="font-semibold text-white">John Doe</MudText>
+                    <MudText Typo="Typo.body2" Align="Align.Center" Color="Color.Warning">Founder & CEO</MudText>
+                 
+                </MudCard>
+            </MudItem>
+    </MudGrid>
+
+        <MudCard Class="pa-8 mt-8 rounded-lg shadow-lg text-center bg-gradient-info text-black  profileText">
+           
+
+            <MudText Typo="Typo.h4" Align="Align.Center" GutterBottom="true" Class="text-warning font-bold mt-6">Vision</MudText>
+            <MudText Typo="Typo.body1" Class="mb-4">
+                To be a leader in developing innovative, scalable, and efficient technology solutions that bridge the gap between front-end and back-end development, creating seamless digital experiences for users around the world. I aim to continuously expand my expertise in emerging technologies and contribute to the growth of the tech community.
+            </MudText>
+
+            <MudText Typo="Typo.h4" Align="Align.Center" GutterBottom="true" Class="text-warning font-bold mt-6">Mission</MudText>
+            <MudText Typo="Typo.body1">
+                My mission is to deliver high-quality, well-architected, and user-centered applications that solve real-world problems. I strive to stay at the forefront of industry trends, applying my skills in front-end and back-end technologies to create impactful, end-to-end solutions. Through collaboration, continuous learning, and adaptability, I aim to contribute to the success of teams, projects, and organizations I work with, while fostering innovation and efficiency.
+            </MudText>
+        </MudCard>
+
+</MudContainer>
+</div>
