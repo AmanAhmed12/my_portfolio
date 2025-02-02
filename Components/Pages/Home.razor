@@ -1,7 +1,51 @@
 ﻿@page "/"
+@using MudBlazor;
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="home">
 
-Welcome to your new app.
+    <MudContainer MaxWidth="MaxWidth.Large" class="mudContainer">
+        <MudGrid>
+            <MudItem xs="12" sm="6" md="8">
+                <MudCard>
+                    <MudCardContent>
+                        <h1  class="designation">ASSOCIATE SOFTWARE ENGINEER</h1>
+                        <p class="description">
+                            Hi, I'm <strong class="highlight">MOHAMED HILMI AMAAN AHMED</strong>, a
+                            <strong class="highlight">Full Stack Developer</strong> with experience in
+                            <strong class="highlight">Spring Boot</strong>, <strong class="highlight">C#</strong>,
+                            <strong class="highlight">Microservices</strong>, <strong class="highlight">PostgreSQL</strong>,
+                            <strong class="highlight">MySQL</strong>, <strong class="highlight">Next.js</strong>,
+                            <strong class="highlight">React.js</strong>, <strong class="highlight">TypeScript</strong>,
+                            and more.
+                        </p>
+                        <p class="description">
+                            Currently working as an <strong class="highlight">Associate Full Stack Developer</strong> at
+                            <strong class="highlight">Techcess Business Solution</strong>, I have a strong foundation in both
+                            front-end and back-end development. I'm passionate about building scalable applications and
+                            continuously improving my skills. With a <strong class="highlight">4.0 GPA</strong> and being the batch topper
+                            at <strong class="highlight">HNDIT, SLIATE</strong>, I’m eager to contribute my expertise to new challenges
+                            and grow in an <strong class="highlight">Associate Software Engineer</strong> role.
+                        </p>
+
+                        <MudButton Variant="Variant.Filled" Class="btn-download">
+                            Download Resume
+                        </MudButton>
+
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+            <MudItem xs="12" sm="6" md="4">
+                <MudCard>
+                    <MudCardContent>
+                        <div class="image-container">
+                            <img src="images/black.png" alt="Your Name or Description" />
+
+                        </div>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
+</div>

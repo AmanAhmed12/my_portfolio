@@ -8,17 +8,89 @@ main {
     flex: 1;
 }
 
+
+.home-section {
+    height: 89vh;
+    position: relative; /* Needed for the pseudo-element positioning */
+}
+
+.about-section {
+    height: 150vh;
+    position: relative;
+}
+
+    .about-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0; /* Position it at the bottom */
+        left: 0;
+        width: 100%; /* Take up the full width */
+        height: 5px; /* You can adjust the height of the border */
+        background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    }
+
+.home-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position it at the bottom */
+    left: 0;
+    width: 100%; /* Take up the full width */
+    height: 5px; /* You can adjust the height of the border */
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+
 .sidebar {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
 
 .top-row {
-    background-color: #f7f7f7;
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
     border-bottom: 1px solid #d6d5d5;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
     align-items: center;
+
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif; /* Font for links */
+    font-weight: 500;
+
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.top-row2 .link.active {
+    font-weight: 600;
+    color: #007bff; /* Highlight active link */
+    background-color:red;
+}
+
+    .link:hover {
+     
+        text-decoration: underline;
+    }
+
+
+.login-btn {
+    color:white;
+}
+.top-row2 {
+    background-color: #f7f7f7;
+    border-bottom: 1px;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    top:0;
+    z-index: 9999;
 }
 
     .top-row ::deep a, .top-row ::deep .btn-link {
@@ -40,6 +112,7 @@ main {
     .top-row {
         justify-content: space-between;
     }
+   
 
     .top-row ::deep a, .top-row ::deep .btn-link {
         margin-left: 0;
@@ -49,6 +122,47 @@ main {
 @media (min-width: 641px) {
     .page {
         flex-direction: row;
+    }
+
+    .home-section {
+        height: 74.8vh;
+        position: relative; /* Needed for the pseudo-element positioning */
+    }
+    .top-row2 {
+        background-color: #f7f7f7;
+        border-bottom: 1px;
+        justify-content: flex-end;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100vw;
+        z-index: 9999;
+    }
+
+        .home-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0; /* Position it at the bottom */
+            left: 0;
+            width: 100%; /* Take up the full width */
+            height: 5px; /* You can adjust the height of the border */
+            background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+        }
+    .link {
+        color: black;
+        text-decoration: none;
+        margin: 5px;
+        padding:8px;
+        font-size: 12px;
+        border-radius:10px;
+        font-weight:bold;
+    }
+
+    .link:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Example shadow */
+            transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+            text-decoration:none;
     }
 
     .sidebar {
@@ -93,4 +207,19 @@ main {
         position: absolute;
         right: 0.75rem;
         top: 0.5rem;
+    }
+
+.about-section {
+    height: 91.7vh;
+    position: relative;
+}
+
+    .about-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0; /* Position it at the bottom */
+        left: 0;
+        width: 100%; /* Take up the full width */
+        height: 5px; /* You can adjust the height of the border */
+        background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
     }
