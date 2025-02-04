@@ -28,9 +28,27 @@
     height: 200px !important;
 }
 
+.headFiveProfile {
+    font-size: 10px;
+    margin-top: 2%;
+    font-weight: bolder;
+    color: #FF6347;
+}
+
+::deep .profileDes {
+    font-size: 10px;
+    line-height:15px;
+}
+::deep .profileDes2 {
+    font-size: 15px;
+}
+.highlight {
+    font-weight: bold;
+    color: #FF6347; /* Tomato color for highlighting */
+}
+
 
 @media (min-width: 641px) {
-
     .text {
         font-size: 30px;
         text-align: center;
@@ -61,6 +79,25 @@
     }
     ::deep .itemOne {
         height: 200px !important;
+    }
+    .headFiveProfile {
+        font-size: 20px;
+        margin-top: 2%;
+        font-weight: bolder;
+        color: #FF6347;
+    }
+
+    ::deep .profileDes {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    ::deep .profileDes2 {
+        font-size: 15px;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #FF6347; /* Tomato color for highlighting */
     }
 
 }

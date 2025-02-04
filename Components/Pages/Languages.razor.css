@@ -1,0 +1,48 @@
+﻿
+.profile-photo1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+::deep .itemOne {
+    height: 220px !important;
+    
+   
+}
+
+::deep .gridMud {
+   margin-top:30%;
+}
+::deep .mudContainer {
+  
+    margin-top: 5%;
+    padding: 5%;
+}
+
+
+@media (min-width: 641px) {
+   
+
+    .profile-photo1 {
+        width:150px;
+        height:150px;
+        border-radius:30px;
+    }
+
+    ::deep .mudContainer {
+       
+        padding: 2%;
+        margin-top: 5%;
+    }
+    ::deep .itemOne {
+        height: 350px !important;
+
+    }
+
+    ::deep .gridMud {
+        margin-top: 0%;
+    }
+    
+
+}
