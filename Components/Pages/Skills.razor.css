@@ -1,0 +1,283 @@
+﻿/* Main container */
+.home {
+    display: flex;
+    justify-content: center;
+
+position:relative;
+top:5%;
+margin-left:3%;
+
+}
+
+
+::deep .headerOne {
+    font-size: 10px; /* Larger header text */
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+::deep .headerTwo {
+    font-size: 10px; /* Larger header text */
+    padding-left: 40%;
+    color: white; /* White text color */
+    font-weight: bold; /* Optional: makes the text bold */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* Skill items */
+::deep .mud-item {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Paper component for each skill */
+::deep .paper {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    width: 100px;
+    height: 95px;
+    color: blue;
+    border-radius: 15px;
+   justify-content:center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+   
+}
+
+
+
+
+
+
+/* Progress Circular effect */
+::deep .mud-progress-circular {
+    transition: transform 0.3s ease;
+    margin: 20px 0px 10px 35px;
+}
+
+    ::deep .mud-progress-circular:hover {
+        transform: scale(1.2);
+    }
+
+/* Chip styling for skills */
+::deep .mud-chip-set {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+::deep .mud-chip {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+    ::deep .mud-chip:hover {
+        background-color: #2563eb;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+/* Text styles */
+::deep .mud-text-h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+::deep .mud-text-body1 {
+    font-size: 1rem;
+}
+
+
+
+
+
+/* Change number of columns in the grid layout for larger screens */
+::deep .mud-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ensures two items per row */
+
+   
+}
+.icon-spacing {
+    margin-left: 8px; /* Adjust the value as needed */
+}
+
+::deep .btn-download {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    width:40%;
+    margin-top:5%;
+    margin-left:25%;
+    margin-bottom:2%;
+    color: white;
+    font-size: 10px;
+    border-radius: 10px;
+    display: inline-flex; /* Use inline-flex to align items */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    padding: 10px 20px; /* Optional padding for better spacing */
+    text-align: center; /* Ensure the text is centered */
+    border: 2px solid #007bff;
+}
+
+::deep .btn-download i {
+    font-size: 18px;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+::deep .btn-download:hover {
+    background-color: white;
+    background-image: none;
+    color: #007bff;
+    border: 2px solid #007bff;
+    transition: color 0.3s ease; /* Smooth color transition */
+    text-decoration: none; /* Ensures no underline appears */
+}
+
+    ::deep .btn-download:hover i {
+        color: #007bff; /* Change icon color on hover */
+    }
+
+/* Media Queries for Larger Screens */
+@media (min-width: 641px) {
+    /* Increase gap between skill cards on larger screens */
+    .home {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 5%;
+        margin-left: 3%;
+    }
+
+    .icon-spacing {
+        margin-left: 8px; /* Adjust the value as needed */
+    }
+
+    ::deep .btn-download {
+        background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+        width: 13%;
+        margin-top: 5%;
+        margin-left: 43%;
+        margin-bottom: 2%;
+        color: white;
+        font-size: 10px;
+        border-radius: 10px;
+        display: inline-flex; /* Use inline-flex to align items */
+        justify-content: center; /* Center the text horizontally */
+        align-items: center; /* Center the text vertically */
+        padding: 10px 20px; /* Optional padding for better spacing */
+        text-align: center; /* Ensure the text is centered */
+        border: 2px solid #007bff;
+    }
+
+        ::deep .btn-download i {
+            font-size: 18px;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+
+        ::deep .btn-download:hover {
+            background-color: white;
+            background-image: none;
+            color: #007bff;
+            border: 2px solid #007bff;
+            transition: color 0.3s ease; /* Smooth color transition */
+            text-decoration: none; /* Ensures no underline appears */
+        }
+
+            ::deep .btn-download:hover i {
+                color: #007bff; /* Change icon color on hover */
+            }
+    /* Change number of columns in the grid layout for larger screens */
+    ::deep .mud-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 250px minimum width for items */
+    }
+
+ 
+
+    /* Make the skill cards larger */
+    ::deep .paper {
+        align-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        width: 60%;
+        height: 100%;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+    }
+
+        /* Hover Effect */
+        ::deep .paper:hover {
+            transform: scale(1.05); /* Slightly enlarges the card */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+            background: linear-gradient(135deg, #f3f3f3, #ffffff); /* Soft gradient */
+            color:black;
+        }
+
+            /* Change .headerOne and .headerTwo color when .paper is hovered */
+            ::deep .paper:hover .headerOne,
+            ::deep .paper:hover .headerTwo {
+                color: black !important; /* Change text color on hover */
+                transition: color 0.3s ease-in-out;
+                font-weight: bolder;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+    /* Make the text in the header and cards a bit larger */
+    ::deep .headerOne {
+        font-size: 17px; /* Larger header text */
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        padding-top: 0%;
+    }
+
+    ::deep .headerTwo {
+        font-size: 12px; /* Larger header text */
+
+        font-family: 'Montserrat', sans-serif;
+        color: white; /* White text color */
+        font-weight: bold; /* Optional: makes the text bold */
+    }
+
+    ::deep .mud-chip {
+        font-size: 1.1rem; /* Slightly larger text on chips */
+        padding: 10px 20px;
+    }
+
+    /* Increase chip gap */
+    ::deep .mud-chip-set {
+        gap: 15px; /* Larger gap between chips */
+    }
+
+
+    /* Progress Circular effect */
+    ::deep .mud-progress-circular {
+        transition: transform 0.3s ease;
+        margin: 20px 0px 10px 50px;
+    }
+
+        ::deep .mud-progress-circular:hover {
+            transform: scale(1.2);
+        }
+
+
+}

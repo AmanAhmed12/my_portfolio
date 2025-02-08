@@ -34,6 +34,21 @@ main {
     position: relative;
 }
 
+.skill-section {
+    height: 115vh;
+    position: relative;
+}
+
+    .skill-section::after {
+        content: '';
+        position: absolute;
+        bottom: 0; /* Position it at the bottom */
+        left: 0;
+        width: 100%; /* Take up the full width */
+        height: 5px; /* You can adjust the height of the border */
+        background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    }
+
     .about-section::after {
         content: '';
         position: absolute;
@@ -242,6 +257,22 @@ main {
         height: 91.7vh;
         position: relative;
     }
+
+    .skill-section {
+        height: 100vh;
+        position: relative;
+    }
+
+        .skill-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0; /* Position it at the bottom */
+            left: 0;
+            width: 100%; /* Take up the full width */
+            height: 5px; /* You can adjust the height of the border */
+            background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+        }
+
 
         .about-section::after {
             content: '';

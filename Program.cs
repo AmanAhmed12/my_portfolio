@@ -3,11 +3,9 @@ using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddRazorComponents()
+builder.Services.AddMudServices();  // Register MudBlazor services for Blazor Server
+builder.Services.AddRazorComponents()  // Add Razor Components
     .AddInteractiveServerComponents();
-
-builder.Services.AddMudServices();
 
 var app = builder.Build();
 

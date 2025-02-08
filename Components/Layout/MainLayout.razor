@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 @using my_portfolio.Components.Pages;
+@using MudBlazor
+@using MudBlazor.Components
 
 <div class="page">
   
@@ -20,7 +22,7 @@
             <a href="#main" class="link" >HOME</a>
             <a href="#about" class="link">PROFILE</a>
             <a href="https://learn.microsoft.com/aspnet/core/" class="link">SERVICES</a>
-            <a href="https://learn.microsoft.com/aspnet/core/" class="link">SKILLS</a>
+            <a href="#skills" class="link">SKILLS</a>
             <a href="#language" class="link">LANGUAGES</a>
             <a href="https://learn.microsoft.com/aspnet/core/" class="link">FRAMEWORKS</a>
             <a href="https://learn.microsoft.com/aspnet/core/" class="link">CONTACT</a>
@@ -33,6 +35,11 @@
 
         <section id="about" class="about-section">
             <About />
+
+        </section>
+
+        <section id="skills" class="skill-section">
+            <Skills />
 
         </section>
 

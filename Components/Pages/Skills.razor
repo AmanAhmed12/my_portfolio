@@ -1,0 +1,70 @@
+﻿@page "/skills"
+
+<PageTitle>Skills</PageTitle>
+
+<div class="home">
+    <MudContainer MaxWidth="MaxWidth.Large" Class="mt-4">
+        <MudCard Class="">
+           
+            <MudCardContent Class="content">
+                <MudGrid >
+                    @foreach (var skill in SkillsList)
+                    {
+                        <MudItem>
+                            <MudPaper Class="paper">
+                                <MudText Class="headerOne">@skill.Name</MudText>
+
+                                <MudProgressCircular Class="" Value="@skill.Proficiency" Min="0.0" Max="100.0" Color="Color.Default" Indeterminate="false" Size="Size.Small" />
+
+                                <MudText Class="headerTwo centered-text">@skill.Proficiency%</MudText>
+                            </MudPaper>
+                        </MudItem>
+                    }
+                </MudGrid>
+            </MudCardContent>
+
+            @* <MudCardActions Class="justify-center"> *@
+            @*     <MudChipSet T="string" Color="Color.Info"> *@
+            @*         @foreach (var skill in SkillsList) *@
+            @*         { *@
+            @*             <MudChip Color="Color.Default" Class="m-1 text-white hover:bg-blue-700 transition-all duration-300 ease-in-out">@skill.Name</MudChip> *@
+            @*         } *@
+            @*     </MudChipSet> *@
+            @* </MudCardActions> *@
+            <MudButton class="btn-download">
+                See More
+                <i class="fas fa-arrow-right icon-spacing"></i> 
+
+             
+            </MudButton>
+          
+        </MudCard>
+       
+    </MudContainer>
+</div>
+
+@code {
+    private List<Skill> SkillsList = new()
+    {
+        new Skill { Name = "C#", Proficiency = 90.0 },
+        new Skill { Name = ".NET Core", Proficiency = 85 },
+        new Skill { Name = "Blazor", Proficiency = 80 },
+        new Skill { Name = "MudBlazor", Proficiency = 75 },
+        new Skill { Name = "SQL", Proficiency = 70 },
+        new Skill { Name = "JavaScript", Proficiency = 65 },
+        new Skill { Name = "TypeScript", Proficiency = 60 },
+        new Skill { Name = "Postgres SQL", Proficiency = 60 },
+        new Skill { Name = "AWS", Proficiency = 60 },
+        new Skill { Name = "SQS", Proficiency = 60 },
+        new Skill { Name = "SpringBoot", Proficiency = 60 },
+        new Skill { Name = "Micro Services", Proficiency = 60 },
+       
+       
+    };
+
+    private class Skill
+    {
+        public string Name { get; set; } = string.Empty;
+        public double Proficiency { get; set; }
+    }
+}
