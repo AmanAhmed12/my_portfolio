@@ -1,11 +1,17 @@
 using my_portfolio.Components;
 using MudBlazor.Services;
+using Microsoft.AspNetCore.Components.Server;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMudServices();  // Register MudBlazor services for Blazor Server
-builder.Services.AddRazorComponents()  // Add Razor Components
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents()
+    .AddInteractiveServerComponents()
+    .AddCircuitOptions(options =>
+    {
+        options.DetailedErrors = true;
+    });
 
 var app = builder.Build();
 

@@ -1,5 +1,7 @@
 ﻿@page "/"
 @using MudBlazor;
+@inject IJSRuntime JSRuntime
+
 
 <PageTitle>Home</PageTitle>
 
@@ -29,11 +31,10 @@
                             and grow in an <strong class="highlight">Associate Software Engineer</strong> role.
                         </p>
 
-                        <MudButton  class="btn-download">
+                        <MudButton @onclick="HandleDownloadClick" class="btn-download">
                             <i class="fas fa-download icon-spacing"></i>
                             Download Resume
                         </MudButton>
-
                     </MudCardContent>
                 </MudCard>
             </MudItem>
@@ -50,3 +51,11 @@
         </MudGrid>
     </MudContainer>
 </div>
+@code {
+    private async Task HandleDownloadClick(MouseEventArgs args)
+    {
+       
+        var resumeUrl = "/resume.pdf"; // Correct relative path
+        await JSRuntime.InvokeVoidAsync("downloadFile", resumeUrl);
+    }
+}
