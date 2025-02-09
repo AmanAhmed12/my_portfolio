@@ -2,6 +2,9 @@
     margin-top:20%;
 
 }
+::deep .secondImages {
+    margin-left: 50px;
+}
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -61,12 +64,14 @@ body {
 .image-container {
     animation: fadeIn 4s ease-out;
     position: relative;
-    width: 200px;
-    height: 220px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
+    margin-left: 0px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
+    background-color: darkgoldenrod;
 }
 
   
@@ -85,14 +90,17 @@ img {
 /* Hover effects for image: scaling, border change, and glow */
 .image-container:hover img {
     transform: scale(1.05);
-    border: 5px solid #00bcd4; /* Neon Border */
-    box-shadow: 0 0 20px rgba(0, 188, 212, 1); /* Neon Glow */
+    border: 5px solid rgba(5, 39, 103, 0.8); /* Deep blue border */
+    box-shadow: 0 0 20px rgba(5, 39, 103, 0.8), /* Deep blue glow */
+    0 0 30px rgba(58, 6, 71, 0.8); /* Purple glow */
 }
 
 /* Subtle glow effect on the image when hovered */
 img:hover {
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+    box-shadow: 0 0 25px rgba(5, 39, 103, 0.8), /* Deep blue glow */
+    0 0 25px rgba(58, 6, 71, 0.8); /* Purple glow */
 }
+
 
 /* Neon Glow Effect */
 img {
@@ -189,13 +197,15 @@ img {
     .image-container {
         animation: fadeIn 4s ease-out;
         position: relative;
-        width: 300px;
-        height: 400px;
-        margin-left: 50%;
+        width: 150px;
+        height: 150px;
+        margin-left: 50px;
+      
         overflow: hidden;
         border-radius: 15px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease;
+        background-color: darkgoldenrod;
     }
     .icon-spacing {
         margin-right: 8px; /* Adjust the value as needed */
@@ -212,5 +222,10 @@ img {
         }
     }
 
+    ::deep .secondImages {
+        margin-left:205px;
+    }
+
+   
  
 }

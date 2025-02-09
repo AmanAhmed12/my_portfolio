@@ -12,7 +12,8 @@
 }
 
 ::deep .gridMud {
-   margin-top:30%;
+   margin-top:10%;
+   padding-left:10%;
 }
 ::deep .mudContainer {
   
@@ -42,6 +43,7 @@
 
     ::deep .gridMud {
         margin-top: 0%;
+        padding-left: 0%;
     }
     
 
